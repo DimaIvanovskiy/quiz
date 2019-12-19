@@ -1,0 +1,23 @@
+{
+  "name": "quiz",
+  "version": "1.0.0",
+  "description": "Сегодня мы сделаем приложение полностью: с пустой папки, с сервером, npm-скриптом, сервером и клиентом.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DimaIvanovskiy/quiz.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DimaIvanovskiy/quiz/issues"
+  },
+  "homepage": "https://github.com/DimaIvanovskiy/quiz#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
