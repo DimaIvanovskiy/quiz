@@ -17,26 +17,30 @@ animal_questions = [
     {
         'question': 'Какой тигр самый крупный?',
         'variants': ["Амурский", 'Малазийский', 'Индийский', 'Сумматранский'],
-        'answer': 'Амурский'
+        'answer': 'Амурский',
+        'picture': '/static/tiger.jpg'
     },
     {
         'question': 'Что говорит кошечка?',
         'variants': ["Мяу", 'Гав', 'Кукареку', 'Хрю'],
-        'answer': 'Мяу'
+        'answer': 'Мяу',
+        'picture': '/static/cat.webp'
     },
     {
         'question': 'Что говорит собачка?',
         'variants': ["Мяу", 'Гав', 'Кукареку', 'Хрю'],
-        'answer': 'Гав'
+        'answer': 'Гав',
+        'picture': '/static/dog.webp'
     }
 ];
 
 app.get('/quiz/animals', (request, response) => {
-    const to_send = [];
+    const to_send = {'items': []};
     for (const item of animal_questions) {
-        to_send.push({
+        to_send['items'].push({
             'question': item['question'],
-            'variants': item['variants']
+            'variants': item['variants'],
+            'picture': item['picture']
         })
     }
     response.json(to_send);
